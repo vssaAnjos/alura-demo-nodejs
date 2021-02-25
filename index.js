@@ -1,13 +1,18 @@
+// modulos
 const express = require('express');
-
+const consign = require('consign');
 const app= express();
 
-// Aplicacao ouvindo na porta 3000
-app.listen(3000,() => console.log('servidor ouvindo na porta 3000!'));
+
 
 // Req = request
 // Res = response
 // Response no get
-app.get('/',(req,res) => res.send('Servidor funcionando...!'))
+// app.get('/',(req,res) => res.send('Servidor funcionando...!'))
 
-app.get('/atendimentos',(req,res) => res.send('Vamos atender mesmo..!'))
+// configacao da aplicacao
+consign() // pesquisar o consign
+    .include('controllers')
+    .into(app)
+// Aplicacao ouvindo na porta 3000
+app.listen(3000,() => console.log('servidor ouvindo na porta 3000!'));
