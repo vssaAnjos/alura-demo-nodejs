@@ -1,5 +1,8 @@
 // controle de rotas
 
+// imports
+const Atendimentos = require('../models/atendimentos')
+
 // exportar uma funcao / um modulo
 module.exports = app => {
 
@@ -11,6 +14,10 @@ module.exports = app => {
 
     app.post('/atendimentos',(req,res) => {
         console.log(req.body)
+        const atendimento = req.body
+        
+        Atendimentos.adicionaAtendimento(atendimento)
+
         res.send('POST: Você está na rota de atendimentos via POST')
     })
 }
