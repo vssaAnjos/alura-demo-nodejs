@@ -16,8 +16,8 @@ module.exports = app => {
         console.log(req.body)
         const atendimento = req.body
         
-        Atendimentos.adicionaAtendimento(atendimento)
+        Atendimentos.adicionaAtendimento(atendimento,res)
 
-        res.send('POST: Você está na rota de atendimentos via POST')
+       // res.send('POST: Você está na rota de atendimentos via POST')
     })
 }
