@@ -7,10 +7,10 @@ class Atendimento{
         const dataAtendimento = moment (atendimento.dataAtendimento,'DD-MM-YYYY').format('YYYY-MM-DD HH:mm:ss')
         const atendimentosDatado = {...atendimento, dataCriacao,dataAtendimento}
 
-        const dataAtendimentoEhValida = moment(dataAtendimento).isSameOrAfter(dataCriacao )
-        const clienteEhValido = atendimento.cliente.lenght >=5
-        console.log(atendimento.cliente.lenght)
-        console.log(clienteEhValido)
+        const dataAtendimentoEhValida = moment(dataAtendimento).isSameOrAfter(dataCriacao)
+        const clienteEhValido = atendimento.cliente.length >= 5;
+        console.log("tamanho do cliente ",atendimento.cliente.length)
+        console.log("valor do clienteEhValido ",clienteEhValido)
 
         const validacoes = [
             {

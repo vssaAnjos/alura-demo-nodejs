@@ -12,7 +12,10 @@ Parte II:
     - Conectamos nosso servidor com o mysql;
     - Criamos tabelas no mysql usando um script node;
     - Salvamos o nosso atendimento no banco de dados.
-
+Parte III:
+    - Tratamos datas com MomentJS;
+    - Estudamos tipos de status HTTP e quando são usados;
+    - Validamos entradas antes de enviar os dados para o banco de dados.
 Modulos:
 
 Models - Responsabilidades:
