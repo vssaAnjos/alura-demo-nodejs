@@ -27,4 +27,11 @@ module.exports = app => {
 
        // res.send('POST: Você está na rota de atendimentos via POST')
     });
+
+    app.patch('/atendimentos/:id', (req,res) => {
+        const id = parseInt(req.params.id)
+        const valores = req.body
+
+        Atendimento.alerar(id,valores,res);
+    })
 }

@@ -65,6 +65,7 @@ class Atendimento{
             }
         })
     }
+    
     buscaPorId(id,res) {
         const sql = `SELECT * FROM Atendimentos WHERE id=${id}`;
         conexao.query(sql, (erro,resultados) => {
@@ -73,6 +74,21 @@ class Atendimento{
                 res.status(400).json(erro);
             } else{
                 res.status(200).json(atendimento);
+            }
+        })
+    }
+
+    alerar(id,valores,res){
+        if (valores.dataAtendimento){
+            valores.dataAtendimento = moment (valores.dataAtendimento,'DD-MM-YYYY').format('YYYY-MM-DD HH:mm:ss');
+        }
+        const sql = 'UPDATE Atendimentos SET ? WHERE id= ? ';
+
+        conexao.query(sql,[valores,id],(erro,resultados) => {
+            if (erro) {
+                res.status(400).json(erro);
+            } else {
+                res.status(200).json(resultados);
             }
         })
     }

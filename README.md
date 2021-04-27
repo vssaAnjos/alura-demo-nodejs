@@ -17,6 +17,7 @@ Parte III:
     - Tratamos datas com MomentJS;
     - Estudamos tipos de status HTTP e quando são usados;
     - Validamos entradas antes de enviar os dados para o banco de dados.
+    - Métodos HTTP: Post, Get, Patch
 Modulos:
 
 Models - Responsabilidades:
