@@ -34,4 +34,9 @@ module.exports = app => {
 
         Atendimento.alerar(id,valores,res);
     })
+
+    app.delete('/atendimentos/:id', (req,res) => {
+        const id = parseInt(req.params.id)
+        Atendimento.excluir(id,res);
+    })
 }
